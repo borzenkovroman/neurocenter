@@ -9,6 +9,7 @@
   "author": "Roman Borzenkov",
   "license": "ISC",
   "devDependencies": {
+    "@fancyapps/fancybox": "^3.5.7",
     "browser-sync": "^2.27.4",
     "del": "^6.0.0",
     "gulp": "^4.0.2",
@@ -19,5 +20,8 @@
     "gulp-uglify": "^3.0.2",
     "jquery": "^3.6.0",
     "sass": "^1.51.0"
+  },
+  "dependencies": {
+    "slick-carousel": "^1.8.1"
   }
 }

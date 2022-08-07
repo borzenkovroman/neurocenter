@@ -4,11 +4,10 @@ body {
 }
 
 body {
-  color: $dark-900;
-  font-size: 14px;
+  color: $white;  
+  font-size: 18px;
   line-height: 1.4;
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 600;
+  @extend %roboto-300;
   background-color: $white;
   display: flex;
   flex-direction: column;
@@ -23,7 +22,7 @@ body.lock {
 }
 
 .container {
-  max-width: 1290px;
+  max-width: 1160px;
   margin: 0 auto;
   padding: 0 15px;
 }
@@ -46,14 +45,33 @@ section {
 }
 
 a {
+  color: $white;
 
+  &:hover {
+    opacity: 0.7;
+  }
+  
+  &:active {
+    color: $title;
+  }
+  
+  &:focus {
+    box-shadow: 0px 0px 0px 3px $accent;
+    border-radius: 3px;
+  }
 }
 
 button,
-img {
+a,
+img,
+svg {
   transition: .5s;
 }
 
 .title {
-
+  font-size: 42px;
+  @extend %raleway-600;
+  letter-spacing: 0.03em;
+  text-align: center;
+  color: $title;
 }
