@@ -75,3 +75,52 @@ svg {
   text-align: center;
   color: $title;
 }
+
+.descr {
+  padding: 100px 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  text-align: center;
+
+  &__title {
+    color: $white;
+    padding-bottom: 40px;
+  }
+
+  &__line {
+    display: flex;
+    margin: 0 auto;
+    background-color: $accent;
+    width: 200px;
+    height: 1px;
+    margin-bottom: 40px;
+  }
+
+  &__text {
+    @extend %roboto-400;
+    display: flex;
+    margin: 0 auto;
+    font-size: 25px;
+    max-width: 1000px;
+
+    &:last-of-type {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    height: 20vh;
+  }
+
+  &__item {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: block;
+    border-radius: 6px;
+  }
+}

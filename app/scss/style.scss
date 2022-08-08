@@ -572,8 +572,88 @@
       }
     }
   }
-
-
 }
+
+.nucleo-indications {
+  color: $title;
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__subtitle {
+    opacity: 0.5;
+    text-align: center;
+    min-width: 100%;
+    font-size: 22px;
+    @extend %robotoitalic-300;
+    margin-bottom: 60px;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 50px;
+    align-items: center;
+  }
+
+  &__item {
+    max-width: 380px;
+
+    &-title {
+      font-size: 24px;
+      @extend %roboto-700;
+      margin-bottom: 24px;
+      max-width: 345px;
+    }
+
+    &-img {
+      max-width: 380px;
+      height: 100%;
+    }
+
+    &--question {
+      opacity: 0.5;
+      @extend %robotoitalic-300;
+    }
+  }
+
+  &__item,
+  &__item-img {
+    margin-bottom: 40px;
+  }
+}
+
+.nucleo-info {
+  background-color: $bg;
+  color: $title;
+  min-height: 100vh;
+  position: relative;
+
+  &::before {
+    content: '';
+    background-image: url('../images/indications/info.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 55%;
+    min-height: 100vh;
+  }
+
+  &__text {
+    max-width: 400px;
+
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+
 
 @import 'media';
