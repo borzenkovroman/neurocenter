@@ -8,5 +8,16 @@ $(function () {
     autoplay: true,
     autoplaySpeed: 2000
   });  
+  
+  $('.menu__btn').on('click', function () {
+    $('.menu').toggleClass('active');
+    $(this).toggleClass('active');
+    $('#body').toggleClass('lock');
+  });
+
+  $('.menu__link').on('click', function () {
+    $('.menu').removeClass('active');
+    $('.menu__btn').removeClass('active');
+  });
 
 });
