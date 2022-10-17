@@ -1,5 +1,4 @@
 @import 'vars';
-@import 'fonts';
 @import 'reset';
 @import 'global';
 @import 'libs';
@@ -10,7 +9,7 @@
   background-size: cover;
   position: relative;
   height: 100vh;
-  z-index: 1;
+  z-index: 2;
   overflow: hidden;
   min-height: 100vh;
 
@@ -32,16 +31,12 @@
     align-items: center;
     justify-content: center;
     height: calc(100vh - 400px);
-
-    &+.fixed {
-      height: 100vh;
-    }
   }
 
   &__title {
     display: flex;
     flex-direction: column;
-    @extend %raleway-700;
+    font-weight: 700;
     font-size: 100px;
     letter-spacing: 0.03em;
     text-align: center;
@@ -49,12 +44,13 @@
   }
 
   &__overtitle {
-    @extend %robotoitalic-300;
+    font-weight: 300;
+    font-style: italic;
     font-size: 14px;
   }
 
   &__subtitle {
-    @extend %roboto-300;
+    font-weight: 300;
     font-size: 20px;
   }
 
@@ -101,6 +97,10 @@
   }
 }
 
+.header__content.fixed {
+  height: calc(100vh - 315px);
+}
+
 .menu {
   position: relative;
   top: 0;
@@ -115,32 +115,12 @@
   &::after {
     content: '';
     position: absolute;
+    width: 200%;
     height: 100%;
     left: -50%;
     background-color: transparent;
     transition: background-color 0.4s;
     z-index: -1;
-  }
-
-  &+.fixed {
-    max-width: 1220px;
-    padding: 50px 10px;
-    margin: 0 auto;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1;
-    display: flex;
-    justify-content: center;
-  }
-
-  &+.fixed {
-    left: 10px;
-
-    &::after {
-      background-color: #5e88849c;
-    }
   }
 
   &__btn {
@@ -149,6 +129,79 @@
     height: 44px;
   }
 
+  .go-top {
+    display: none;
+  }
+
+  .go-top.fixed {
+    background-image: url('../images/icons/go-top.svg');
+    background-repeat: no-repeat; 
+    background-position: center center;
+    background-size: cover;
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    bottom: 15%;
+    left: 5%;
+    display: block;
+  }
+
+  @keyframes rotateReverse {
+    to {
+      transform: rotate(-360deg);
+    }
+  }
+
+  .phone-call {
+    width: 100px;
+    height: 100px;
+    position: fixed;
+    bottom: 15%;
+    right: 5%;
+    display: block;
+    font: 300 1.55rem/1.4 "Josefin Sans";
+    text-transform: uppercase;
+    letter-spacing: 0.1175em;
+    word-spacing: 0.3em;
+
+    &__svg {
+      width: 100%;
+      height: auto;
+      transform-box: fill-box;
+      fill: $textColor;
+      stroke: $textColor;
+      stroke-width: 0.05em;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    &__arrow {
+      stroke-width: 0.075em;
+    }
+
+    &__text {
+      animation: rotateReverse normal infinite $rotationDuration linear;
+      transform-origin: 50% 50%;
+    }
+
+    &:hover {
+
+      .phone-call__text {
+        animation-play-state: paused;
+      }
+    }
+
+    .phone-call__arrow {
+      position: absolute;
+      bottom: 50%;
+      right: 50%;
+      transform: translate(50%, 50%);
+      transform-origin: 50% 50%;
+      transition: transform $hoverDuration / 2 $easeIn;
+    }
+  }
+
+  
   &__list {
     display: flex;
     z-index: 1;
@@ -165,7 +218,7 @@
     position: relative;
     padding: 5px 2px;
     font-size: 24px;
-    @extend %roboto-400;
+    font-weight: 400;
     border-bottom: 1px solid transparent;
 
     &::before {
@@ -189,6 +242,27 @@
       color: $title;
     }
   }
+}
+
+.menu.fixed {
+  max-width: 1220px;
+  padding: 50px 10px;
+  margin: 0 auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+}
+
+.menu.fixed {
+  left: 10px;
+}
+
+.menu.fixed::after {
+  background-color: rgb(49, 181, 204);
 }
 
 .about {
@@ -277,15 +351,6 @@
     background-repeat: no-repeat;
     position: relative;
     z-index: 0;
-    
-    &:hover {
-      color: $accent;
-      opacity: 1;
-      
-      .methods__arrow {
-        stroke: $accent;
-      }
-    }
 
     &::before {
       content: '';
@@ -301,6 +366,16 @@
       border-radius: 15px;
       z-index: -1;
     }
+    
+    &:hover {
+      color: $accent;
+      opacity: 1;
+
+      .methods__arrow {
+        stroke: $accent;
+      }
+    }
+
 
     &-link {
       position: relative;
@@ -332,7 +407,7 @@
     &-title {
       max-width: 250px;
       font-size: 22px;
-      @extend %roboto-400;
+      font-weight: 400;
     }
   }
 
@@ -403,13 +478,13 @@
     align-items: center;
     top: 50%;
     transform: translateY(-50%);
-    z-index: 1;
     position: absolute;
     width: 60px;
     height: 60px;
     background-color: $bg;
     opacity: 0.7;
     border-radius: 6px;
+    z-index: 1;
   }
 }
 
@@ -547,7 +622,7 @@
     }
 
     &-title {
-      @extend %roboto-700;
+      font-weight: 700;
       font-size: 30px;
       margin-bottom: 20px;
 
@@ -608,13 +683,38 @@
     margin-bottom: 20px;
   }
 
+  @keyframes superFlash {
+
+    0%,
+    20%,
+    40%,
+    60%,
+    80%,
+    100% {
+      opacity: 1;
+    }
+
+    5%,
+    25%,
+    45%,
+    65%,
+    85% {
+      opacity: 0;
+    }
+  }
+
   &__subtitle {
     opacity: 0.5;
     text-align: center;
     min-width: 100%;
     font-size: 22px;
-    @extend %robotoitalic-300;
-    margin-bottom: 60px;
+    font-weight: 300;
+    font-style: italic;
+    margin-bottom: 60px; 
+    animation-name: superFlash;
+    animation-duration: 5s;
+    animation-fill-mode: both;
+    transform-origin: center;
   }
 
   &__wrapper {
@@ -630,7 +730,7 @@
 
     &-title {
       font-size: 24px;
-      @extend %roboto-700;
+      font-weight: 700;
       margin-bottom: 24px;
       max-width: 345px;
     }
@@ -639,12 +739,14 @@
       @media (min-width: '380px') {
         max-width: 380px;
       }
+
       height: 100%;
     }
 
     &--question {
       opacity: 0.5;
-      @extend %robotoitalic-300;
+      font-weight: 300;
+      font-style: italic;
     }
   }
 
@@ -716,7 +818,7 @@
 
     &-title {
       font-size: 24px;
-      @extend %roboto-700;
+      font-weight: 700;
       margin-bottom: 15px;
       min-width: 410px;
     }
@@ -747,7 +849,7 @@
   }
 
   &__descr {
-    @extend %roboto-700;
+    font-weight: 700;
     text-align: right;
   }
 }
@@ -759,7 +861,7 @@
   background-position: center center;
   position: relative;
   text-align: center;
-  z-index: 1;
+  z-index: 0;
 
   &::before {
     content: '';
@@ -791,7 +893,7 @@
     background-color: #1f5bff;
     padding: 20px 60px;
     border-radius: 100px;
-    @extend %roboto-700;
+    font-weight: 700;
     position: relative;
 
     &::before {
@@ -891,7 +993,7 @@
 
     &-title {
       font-size: 24px;
-      @extend %roboto-700;
+      font-weight: 700;
       margin-bottom: 15px;
     }
   }
@@ -904,12 +1006,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 70px;
   }
 
   &__info {
 
     &-title {
-      @extend %roboto-700;
+      font-weight: 700;
       font-size: 30px;
       margin-bottom: 40px;
     }
@@ -1000,6 +1103,55 @@
       }
     }
   }
+
+  &__box {
+    margin: 0 auto 40px;
+  }
+
+  &__title {
+    text-align: center;
+    font-weight: 700;
+    font-size: 30px;
+    margin-bottom: 60px;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 150px;
+      height: 3px;
+      background-color: $accent;
+      bottom: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &__form {
+    padding: 60px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border: 2px solid $bg;
+  }
+
+  &__input {
+    padding: 15px 30px;
+    border: 1px solid $bg;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    width: 100%;
+    display: block;
+
+    &:last-of-type {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__btn {
+    @extend %btn;
+  }
 }
 
 .footer {
@@ -1010,7 +1162,8 @@
     display: flex;
     justify-content: center;
     opacity: 0.7;
-    @extend %robotoitalic-300;
+    font-weight: 300;
+    font-style: italic;
     font-size: 14px;
     position: relative;
 
@@ -1032,6 +1185,10 @@
 }
 
 @media (max-width: 1200px) {
+  .menu.fixed {
+    padding: 30px 0;
+  }
+
   .about {
 
     &__video {
@@ -1402,6 +1559,19 @@
   }
 }
 
+@media (max-width: 768px) and (orientation: landscape) {
+  .menu__list {
+    padding: 82px 0 15px;
+  }
+
+  .menu__link {
+    display: block;
+    padding: 5px 0;
+    font-size: 20px;
+    line-height: 26px;
+  }
+}
+
 @media (max-width: 768px) {
   .title {
     font-size: 30px;
@@ -1521,6 +1691,10 @@
       font-size: 50px;
       letter-spacing: normal;
     }
+  }
+
+  .menu__btn {
+    right: 5px;
   }
 
   .methods {

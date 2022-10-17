@@ -2,39 +2,39 @@ $bg: #efefef;
 $title: #1c2b2e;
 $accent: #8ecfe7;
 $white: #fff;
+$rotationDuration: 20s;
+$hoverDuration: 0.3s;
+$easeIn: cubic-bezier(0.32, 0, 0.67, 0);
+$easeOut: cubic-bezier(0.33, 1, 0.68, 1);
 
-%roboto-300 {
-  font-family: 'Montserrat-Light';
-  font-weight: 300;
-}
+$textColor: #8ecfe7;
 
-%robotoitalic-300 {
-  font-family: 'Montserrat-LightItalic';
-  font-weight: 300;
-  font-style: italic;
-}
-
-%roboto-400 {
-  font-family: 'Montserrat-Regular';
-  font-weight: 400;
-}
-
-%robotoitalic-400 {
-  font-family: 'Montserrat-RegularItalic';
-  font-weight: 400;
-}
-
-%roboto-700 {
-  font-family: 'Montserrat-Bold';
-  font-weight: 700;
-}
-
-%raleway-600 {
-  font-family: 'Montserrat-SemiBold';
+%btn {
   font-weight: 600;
-}
+  padding: 20px 40px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  background-color: $accent;
+  color: $white;
+  font-size: 22px;
 
-%raleway-700 {
-  font-family: 'Montserrat-SemiBold';
-  font-weight: 700;
+  &:hover {
+    background-color: $white;
+    color: $accent;
+    outline: 1px solid $accent;
+  }
+
+  &:focus {
+    background-color: $white;
+    color: $accent;
+    outline: 3px solid $accent;
+    border-radius: 6px;
+  }
+
+  &:active {
+    background-color: $accent;
+    opacity: 0.5;
+    color: $white;
+  }
 }

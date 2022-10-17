@@ -1,4 +1,30 @@
 $(function () {
+  
+  $(window).scroll(function() {
+    var height = $(window).scrollTop();
+    
+    if (height >= 100) {
+      $('.menu').addClass('fixed');
+      $('.header__content').addClass('fixed');
+      $('.go-top').addClass('fixed');
+    } 
+    else {
+      $('.menu').removeClass('fixed');
+      $('.header__content').removeClass('fixed');
+      $('.go-top').removeClass('fixed');
+    }
+  });
+  
+  wow = new WOW(
+    {
+      boxClass:     'wow',     
+      animateClass: 'animated',
+      offset:       0,         
+      mobile:       true,      
+      live:         true       
+    }
+    )
+    wow.init();
 
   $('.blog__wrapper').slick({
     dots: true,
