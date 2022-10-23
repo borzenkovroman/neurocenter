@@ -5,12 +5,12 @@ $(function () {
     
     if (height >= 100) {
       $('.menu').addClass('fixed');
-      $('.header__content').addClass('fixed');
+      $('.hero__content').addClass('fixed');
       $('.go-top').addClass('fixed');
     } 
     else {
       $('.menu').removeClass('fixed');
-      $('.header__content').removeClass('fixed');
+      $('.hero__content').removeClass('fixed');
       $('.go-top').removeClass('fixed');
     }
   });

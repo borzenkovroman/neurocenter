@@ -1,0 +1,94 @@
+.expertise {
+  background-color: $bg;
+  color: $title;
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__subtitle {
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 50px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 60px;
+  }
+
+  &__item {
+    max-width: 600px;
+    padding-right: 150px;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 17%;
+      right: 3.8%;
+      transform: translate(3.8%, -17%);
+      width: 40px;
+      height: 40px;
+      display: block;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+      z-index: 1;
+    }
+
+    &-title {
+      font-weight: 700;
+      font-size: 30px;
+      margin-bottom: 20px;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        border-radius: 50%;
+        padding: 40px;
+        background-color: rgb(223, 223, 223);
+        display: block;
+      }
+    }
+
+    &-text {
+      min-width: 406px;
+    }
+
+    &--star {
+
+      &::before {
+        content: '';
+        background-image: url('../images/icons/star.svg');
+      }
+    }
+
+    &--dialogue {
+
+      &::before {
+        content: '';
+        background-image: url('../images/icons/dialogue.svg');
+      }
+    }
+
+    &--money {
+
+      &::before {
+        content: '';
+        background-image: url('../images/icons/money.svg');
+      }
+    }
+
+    &--user {
+
+      &::before {
+        content: '';
+        background-image: url('../images/icons/user.svg');
+      }
+    }
+  }
+}

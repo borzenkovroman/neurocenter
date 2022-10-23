@@ -9,7 +9,7 @@ $easeOut: cubic-bezier(0.33, 1, 0.68, 1);
 
 $textColor: #8ecfe7;
 
-%btn {
+.btn {
   font-weight: 600;
   padding: 20px 40px;
   margin: 0 auto;
@@ -36,5 +36,19 @@ $textColor: #8ecfe7;
     background-color: $accent;
     opacity: 0.5;
     color: $white;
+  }
+}
+
+@keyframes heroArrow {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(10px);
+  }
+
+  100% {
+    transform: translateY(0px);
   }
 }

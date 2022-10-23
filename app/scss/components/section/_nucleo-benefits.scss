@@ -1,0 +1,43 @@
+.nucleo-benefits {
+  color: $title;
+
+  &__title {
+    margin-bottom: 40px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 40px 30px;
+  }
+
+  &__item {
+    position: relative;
+    padding-left: 60px;
+
+    &::before {
+      content: '';
+      background-image: url('../images/icons/check.svg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+      position: absolute;
+      left: 0;
+      top: 0;
+      display: block;
+      width: 40px;
+      height: 40px;
+    }
+
+    &-title {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 15px;
+      min-width: 410px;
+    }
+
+    &-text {
+      max-width: 425px;
+    }
+  }
+}

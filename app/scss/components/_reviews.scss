@@ -1,0 +1,40 @@
+.reviews {
+  padding: 70px 0;
+  color: $title;
+  background-color: $bg;
+
+  &__title {
+    margin-bottom: 40px;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__info {
+    max-width: 460px;
+
+    &-item {
+
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+
+    &-text {
+
+      &:first-child {
+        margin-bottom: 5px;
+      }
+    }
+  }
+
+  &__noname {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+}

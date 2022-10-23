@@ -1,0 +1,80 @@
+.nucleo-indications {
+  color: $title;
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  @keyframes superFlash {
+
+    0%,
+    20%,
+    40%,
+    60%,
+    80%,
+    100% {
+      opacity: 1;
+    }
+
+    5%,
+    25%,
+    45%,
+    65%,
+    85% {
+      opacity: 0;
+    }
+  }
+
+  &__subtitle {
+    opacity: 0.5;
+    text-align: center;
+    min-width: 100%;
+    font-size: 22px;
+    font-weight: 300;
+    font-style: italic;
+    margin-bottom: 60px;
+    animation-name: superFlash;
+    animation-duration: 5s;
+    animation-fill-mode: both;
+    transform-origin: center;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: center;
+    column-gap: 50px;
+    align-items: center;
+
+    &-title {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 24px;
+      max-width: 345px;
+    }
+
+    &-img {
+      @media (min-width: '380px') {
+        max-width: 380px;
+      }
+
+      height: 100%;
+    }
+
+    &-text {
+
+      &--question {
+        opacity: 0.5;
+        font-weight: 300;
+        font-style: italic;
+      }
+    }
+  }
+
+  &__box {
+    max-width: 380px;
+  }
+
+  &__item {
+    margin-bottom: 40px;
+  }
+}

@@ -9,104 +9,97 @@
     Нейроцентр | Безопераційне лікування гриж та протрузій
   </title>
 
-  <link rel="stylesheet" href="css/style.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap"
+  rel="stylesheet">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body id="body">
-  <header class="header" id="home" style="background-image: url('images/header-bg.jpg');">
+  <div class="hero" id="home" style="background-image: url('images/hero-bg.jpg');">
     <div class="container">
-      <nav class="menu">
-        <button class="menu__btn" type="button">
-          <span class="menu__line"></span>
-          <span class="sr-only">открыть главное меню</span>
-        </button>
+      <header class="header">
+        <nav class="menu">
+          <button class="menu__btn" type="button">
+            <span class="menu__line"></span>
+            <span class="sr-only">открыть главное меню</span>
+          </button>
 
-        <a class="go-top" href="#home"></a>
+          <a href="tel:+380956448159" class="phone-call">
+            <svg viewBox="0 0 200 200" width="200" height="200" class="phone-call__svg">
+              <title>Записатись на прийом</title>
+              <desc>A rotating link with text placed around a circle with an arrow inside</desc>
 
-        <a href="tel:+380956448159" class="phone-call">
-          <?xml version="1.0" encoding="UTF-8"?>
-          <svg viewBox='0 0 200 200' width='200' height='200' xmlns='http://www.w3.org/2000/svg' class="phone-call__svg"
-            aria-labelledby="phone-call1-title phone-call1-desc">
-            <title id="phone-call1-title">Записатись на прийом</title>
-            <desc id="phone-call1-desc">A rotating link with text placed around a circle with an arrow inside</desc>
+              <path id="phone-call-circle" class="phone-call__path" d="M 20, 100 a 80,80 0 1,1 160,0 a 80,80 0 1,1 -160,0"
+                stroke="none" fill="none" />
 
-            <path id="phone-call-circle" class="phone-call__path" d="M 20, 100 a 80,80 0 1,1 160,0 a 80,80 0 1,1 -160,0"
-              stroke="none" fill="none" />
+              <text class="phone-call__text">
+                <textPath href="#phone-call-circle" stroke="none">
+                  Записатись на прийом
+                </textPath>
+              </text>
+            </svg>
+            
+            <svg class="phone-call__arrow" width="60" height="60">
+              <use xlink:href="images/icons/sprite.svg#phone-call"></use>
+            </svg>
+          </a>
 
-            <text class="phone-call__text">
-              <textPath href="#phone-call-circle" stroke="none">
-                Записатись на прийом
-              </textPath>
-            </text>
-          </svg>
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a class="menu__link" href="#about">
+                Про нас
+              </a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#methods">
+                Методики лікування
+              </a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#knowledge">
+                Важливо знати
+              </a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#contact">
+                Контакти
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </header>
 
-          <svg class="phone-call__arrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-            width="60px" height="60px" viewBox="0 0 60 60" version="1.1">
-            <g id="surface1">
-              <path style=" stroke:none;fill-rule:nonzero;fill:rgb(49, 181, 204);fill-opacity:1;"
-                d="M 13.699219 2.039062 C 11.824219 2.753906 8.332031 6.199219 5.085938 10.511719 C 3.796875 12.234375 2.789062 13.78125 2.261719 14.882812 L 1.828125 15.75 L 1.96875 16.933594 C 3.046875 26.25 10.804688 38.425781 21.210938 47.121094 C 28.558594 53.25 36.480469 57.222656 43.007812 58.019531 C 44.085938 58.160156 44.144531 58.148438 44.824219 57.878906 C 47.589844 56.742188 54.128906 51.492188 56.601562 48.410156 C 58.171875 46.453125 58.40625 45.503906 57.679688 44.027344 C 57.1875 43.019531 56.660156 42.5625 53.871094 40.6875 C 48.210938 36.867188 44.15625 34.804688 42.339844 34.804688 C 40.992188 34.804688 40.230469 35.367188 38.027344 37.957031 C 37.253906 38.859375 36.550781 39.609375 36.46875 39.609375 C 36.210938 39.609375 34.3125 38.835938 33.175781 38.273438 C 29.15625 36.246094 25.78125 33.269531 23.296875 29.53125 C 22.371094 28.148438 21.058594 25.558594 20.636719 24.304688 L 20.355469 23.472656 L 20.8125 23.0625 C 21.058594 22.839844 21.820312 22.183594 22.5 21.597656 C 24.597656 19.816406 25.089844 19.125 25.171875 17.835938 C 25.207031 17.296875 25.160156 16.898438 24.960938 16.277344 C 24.597656 15.164062 23.332031 12.585938 22.148438 10.605469 C 20.8125 8.355469 17.929688 4.019531 17.273438 3.292969 C 16.324219 2.238281 14.683594 1.664062 13.699219 2.039062 Z M 13.699219 2.039062 " />
-            </g>
-          </svg>
-        </a>
-
-        <ul class="menu__list">
-          <li class="menu__item">
-            <a class="menu__link" href="#about">
-              Про нас
-            </a>
-          </li>
-          <li class="menu__item">
-            <a class="menu__link" href="#methods">
-              Методики лікування
-            </a>
-          </li>
-          <li class="menu__item">
-            <a class="menu__link" href="#knowledge">
-              Важливо знати
-            </a>
-          </li>
-          <li class="menu__item">
-            <a class="menu__link" href="#contact">
-              Контакти
-            </a>
-          </li>
-        </ul>
-      </nav>
-
-      <div class="header__content">
-        <h1 class="header__title">
-          <span class="animate__animated wow animate__fadeInDown header__overtitle">
+      <div class="hero__content">
+        <h1 class="hero__title">
+          <span class="animate__animated wow animate__fadeInDown hero__overtitle">
             Бережемо найцінніше
           </span>
 
           Нейроцентр
 
-          <span class="animate__animated wow animate__fadeInRight animate__delay-1s header__subtitle">
+          <span class="animate__animated wow animate__fadeInRight animate__delay-1s hero__subtitle">
             Лікування захворювань хребта без розрізу та наркозу
           </span>
         </h1>
 
-        <a class="header__link" href="#about">
-          <svg style="width: 40; height: 20;">
+        <a class="hero__link" href="#about">
+          <svg width="40" height="20">
             <use xlink:href="images/icons/sprite.svg#arrow-down"></use>
           </svg>
 
           <span class="sr-only">
-            натиснути для переходу нижче
+            натиснути для переходу до розділу про нас
           </span>
         </a>
       </div>
     </div>
-  </header>
+  </div>
 
   <main class="main">
-    <section class="about" id="about" style="background-image: url('images/video-bg.png');">
+    <section class="about section" id="about">
       <div class="container">
         <div class="about__video">
           <a data-fancybox class="animate__animated wow animate__backInUp about__video-link"
@@ -118,149 +111,155 @@
       </div>
     </section>
 
-    <section class="blog">
+    <section class="blog section">
       <div class="blog__container">
         <div class="blog__wrapper">
-          <div class="blog__item" style="background-image: url('images/blog/1.jpg');">
-
+          <div class="blog__item">
+            <img class="blog__img" src="images/blog/1.jpg" width="300" height="250" alt="типові місця виникнення болю">
           </div>
 
-          <div class="blog__item" style="background-image: url('images/blog/2.jpg');">
-
+          <div class="blog__item">
+            <img class="blog__img" src="images/blog/2.jpg" width="300" height="250" alt="біль в поперековому відділі хребта">
           </div>
 
-          <div class="blog__item" style="background-image: url('images/blog/3.jpg');">
-
+          <div class="blog__item">
+            <img class="blog__img" src="images/blog/3.jpg" width="300" height="250" alt="зображення будови хребта">
           </div>
         </div>
       </div>
     </section>
 
-    <section class="methods" id="methods">
+    <section class="methods section" id="methods">
       <div class="container">
         <h2 class="methods__title title">
           Сучасні методи лікування
         </h2>
 
-        <div class=" methods__box">
-          <a class="animate__animated wow animate__fadeInLeftBig methods__item methods--one" href="#neuro">
-            <div class="methods__item-link">
-              <div class="methods__item-top">
-                <h3 class="methods__item-title">
-                  Нейромодуляція
-                </h3>
+        <ul class="methods__box">
+          <li class="methods__box-item methods--one">
+            <a class="animate__animated wow animate__fadeInLeftBig methods__item" href="#neuro">
+              <div class="methods__item-link">
+                <div class="methods__item-top">
+                  <h3 class="methods__item-title">
+                    Нейромодуляція
+                  </h3>
 
-                <svg class="methods__arrow" role="presentation" class="t959__card-arrow " width="14" height="24"
-                  viewBox="0 0 14 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M1 0.994385L12 11.9944L1 22.9944" stroke-width="2"></path>
-                </svg>
+                  <svg class="methods__arrow" width="14" height="24">
+                    <use xlink:href="images/icons/sprite.svg#methods-arrow"></use>
+                  </svg>
+                </div>
+
+                <p class="methods__text">
+                  М'яке переривання проходження больових імпульсів від попереку та ніг до головного мозку
+                </p>
               </div>
+            </a>
+          </li>
 
-              <p class="methods__text">
-                М'яке переривання проходження больових імпульсів від попереку та ніг до головного мозку
-              </p>
-            </div>
-          </a>
+          <li class="methods__box-item methods--two">
+            <a class="animate__animated wow animate__fadeInLeftBig methods__item" href="#nucleo">
+              <div class="methods__item-link">
+                <div class="methods__item-top">
+                  <h3 class="methods__item-title">
+                    Нуклеопластика в поперековому та шийному відділі хребта
+                  </h3>
 
-          <a class="animate__animated wow animate__fadeInLeftBig methods__item methods--two" href="#nucleo">
-            <div class="methods__item-link">
-              <div class="methods__item-top">
-                <h3 class="methods__item-title">
-                  Нуклеопластика в поперековому та шийному відділі хребта
-                </h3>
+                  <svg class="methods__arrow" width="14" height="24">
+                    <use xlink:href="images/icons/sprite.svg#methods-arrow"></use>
+                  </svg>
+                </div>
 
-                <svg class="methods__arrow" role="presentation" class="t959__card-arrow " width="14" height="24"
-                  viewBox="0 0 14 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M1 0.994385L12 11.9944L1 22.9944" stroke-width="2"></path>
-                </svg>
+                <p class="methods__text">
+                  Малоінвазивний метод при протрузіях або грижах в поперековому та шийному відділі хребта
+                </p>
               </div>
+            </a>
+          </li>
 
-              <p class="methods__text">
-                Малоінвазивний метод при протрузіях або грижах в поперековому та шийному відділі хребта
-              </p>
-            </div>
-          </a>
+          <li class="methods__box-item methods--three">
+            <a class="animate__animated wow animate__fadeInLeftBig methods__item" href="#nevro">
+              <div class="methods__item-link">
+                <div class="methods__item-top">
+                  <h3 class="methods__item-title">
+                    Невралгія трійчастого нерва
+                  </h3>
 
-          <a class="animate__animated wow animate__fadeInLeftBig methods__item methods--three" href="#nevro">
-            <div class="methods__item-link">
-              <div class="methods__item-top">
-                <h3 class="methods__item-title">
-                  Невралгія трійчастого нерва
-                </h3>
+                  <svg class="methods__arrow" width="14" height="24">
+                    <use xlink:href="images/icons/sprite.svg#methods-arrow"></use>
+                  </svg>
+                </div>
 
-                <svg class="methods__arrow" role="presentation" class="t959__card-arrow " width="14" height="24"
-                  viewBox="0 0 14 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M1 0.994385L12 11.9944L1 22.9944" stroke-width="2"></path>
-                </svg>
+                <p class="methods__text">
+                  Малоінвазивний метод лікування при болю в обличчі
+                </p>
               </div>
+            </a>
+          </li>
 
-              <p class="methods__text">
-                Малоінвазивний метод лікування при болю в обличчі
-              </p>
-            </div>
-          </a>
+          <li class="methods__box-item methods--four">
+            <a class="animate__animated wow animate__fadeInRightBig methods__item" href="#vertebro">
+              <div class="methods__item-link">
+                <div class="methods__item-top">
+                  <h3 class="methods__item-title">
+                    Вертебропластика
+                  </h3>
 
-          <a class="animate__animated wow animate__fadeInRightBig methods__item methods--four" href="#vertebro">
-            <div class="methods__item-link">
-              <div class="methods__item-top">
-                <h3 class="methods__item-title">
-                  Вертебропластика
-                </h3>
+                  <svg class="methods__arrow" width="14" height="24">
+                    <use xlink:href="images/icons/sprite.svg#methods-arrow"></use>
+                  </svg>
+                </div>
 
-                <svg class="methods__arrow" role="presentation" class="t959__card-arrow " width="14" height="24"
-                  viewBox="0 0 14 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M1 0.994385L12 11.9944L1 22.9944" stroke-width="2"></path>
-                </svg>
+                <p class="methods__text">
+                  Процедура виконується при компресійних переломах тіл хребців або при гемангіомах
+                </p>
               </div>
+            </a>
+          </li>
 
-              <p class="methods__text">
-                Процедура виконується при компресійних переломах тіл хребців або при гемангіомах
-              </p>
-            </div>
-          </a>
+          <li class="methods__box-item methods--five">
+            <a class="animate__animated wow animate__fadeInRightBig methods__item" href="#syndrom">
+              <div class="methods__item-link">
+                <div class="methods__item-top">
+                  <h3 class="methods__item-title">
+                    Синдром карпального каналу та кубітального каналу
+                  </h3>
 
-          <a class="animate__animated wow animate__fadeInRightBig methods__item methods--five" href="#syndrom">
-            <div class="methods__item-link">
-              <div class="methods__item-top">
-                <h3 class="methods__item-title">
-                  Синдром карпального каналу та кубітального каналу
-                </h3>
+                  <svg class="methods__arrow" width="14" height="24">
+                    <use xlink:href="images/icons/sprite.svg#methods-arrow"></use>
+                  </svg>
+                </div>
 
-                <svg class="methods__arrow" role="presentation" class="t959__card-arrow " width="14" height="24"
-                  viewBox="0 0 14 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M1 0.994385L12 11.9944L1 22.9944" stroke-width="2"></path>
-                </svg>
+                <p class="methods__text">
+                  Малоінвазивне розсічення зв'язки серединного, ліктьового нерва при болях та онімінні в пальцях рук
+                </p>
               </div>
+            </a>
+          </li>
 
-              <p class="methods__text">
-                Малоінвазивне розсічення зв'язки серединного, ліктьового нерва при болях та онімінні в пальцях рук
-              </p>
-            </div>
-          </a>
+          <li class="methods__box-item methods--six">
+            <a class="animate__animated wow animate__fadeInRightBig methods__item" href="#micro">
+              <div class="methods__item-link">
+                <div class="methods__item-top">
+                  <h3 class="methods__item-title">
+                    Мікродискектомія
+                  </h3>
 
-          <a class="animate__animated wow animate__fadeInRightBig methods__item methods--six" href="#micro">
-            <div class="methods__item-link">
-              <div class="methods__item-top">
-                <h3 class="methods__item-title">
-                  Мікродискектомія
-                </h3>
+                  <svg class="methods__arrow" width="14" height="24">
+                    <use xlink:href="images/icons/sprite.svg#methods-arrow"></use>
+                  </svg>
+                </div>
 
-                <svg class="methods__arrow" role="presentation" class="t959__card-arrow " width="14" height="24"
-                  viewBox="0 0 14 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M1 0.994385L12 11.9944L1 22.9944" stroke-width="2"></path>
-                </svg>
+                <p class="methods__text">
+                  Малоінвазивне видалення великих гриж хребта та при стенозі спинномозкового каналу
+                </p>
               </div>
-
-              <p class="methods__text">
-                Малоінвазивне видалення великих гриж хребта та при стенозі спинномозкового каналу
-              </p>
-            </div>
-          </a>
-        </div>
+            </a>
+          </li>
+        </ul>
       </div>
     </section>
 
-    <section class="expertise">
+    <section class="expertise section">
       <div class="container">
         <h2 class="expertise__title title">
           Переваги наших методів
@@ -317,15 +316,11 @@
       </div>
     </section>
 
-    <section class="descr" id="nucleo" style="background-image: url('images/descr-bg.jpg')">
+    <section class="descr section" id="nucleo" style="background-image: url('images/descr-bg.jpg')">
       <div class="container">
         <h2 class="descr__title title">
           Нуклеопластика
         </h2>
-
-        <span class="descr__line">
-
-        </span>
 
         <p class="descr__text">
           Холодноплазменна нуклеопластика - це малоінвазивна операція, яка виконується під місцевою анестезією через
@@ -339,131 +334,142 @@
         </p>
 
         <ul class="descr__list">
-          <li class="descr__item" style="background-image: url('images/nucleo/1.jpg');"></li>
-          <li class="descr__item" style="background-image: url('images/nucleo/2.jpg');"></li>
-          <li class="descr__item" style="background-image: url('images/nucleo/3.jpg');"></li>
+          <li class="descr__item">
+            <img class="descr__img" src="images/nucleo/1.jpg" alt="зображення процесу виконання процедури" width="250" height="150">
+          </li>
+
+          <li class="descr__item">
+            <img class="descr__img" src="images/nucleo/2.jpg" alt="зображення процесу виконання процедури" width="250" height="150">
+          </li>
+
+          <li class="descr__item">
+            <img class="descr__img" src="images/nucleo/3.jpg" alt="зображення процесу виконання процедури" width="250" height="150">
+          </li>
         </ul>
       </div>
     </section>
 
-    <section class="nucleo-indications">
+    <section class="nucleo-indications section">
       <div class="container">
-        <h3 class="nucleo-indications__title title">
+        <h2 class="nucleo-indications__title title">
           В яких випадках рекомендована процедура?
-        </h3>
+        </h2>
 
         <p class="wow nucleo-indications__subtitle">
           *Для визначення причини болю - необхідна консультація спеціаліста та виконання МРТ
         </p>
 
-        <div class="nucleo-indications__wrapper">
-          <div class="nucleo-indications__item">
-            <h3 class="nucleo-indications__item-title">
-              Протрузія міжхребцевого диску
-            </h3>
+        <ul class="nucleo-indications__list">
+          <li class="nucleo-indications__item">
+            <div class="nucleo-indications__box">
+              <h3 class="nucleo-indications__item-title">
+                Протрузія міжхребцевого диску
+              </h3>
 
-            <p class="nucleo-indications__item-text">
-              Це випуклість міжхребцевого диску без розриву фіброзного кільця.
-            </p>
+              <p class="nucleo-indications__item-text">
+                Це випуклість міжхребцевого диску без розриву фіброзного кільця.
+              </p>
 
-            <p class="nucleo-indications__item-text">
-              Якщо ви вже зробили МРТ поперекового чи шийного відділу хребта, та вам описали протрузію - відправте МРТ
-              на
-              viber чи telegram нашому лікарю для безкоштовної консультації.
-            </p>
-          </div>
+              <p class="nucleo-indications__item-text">
+                Якщо ви вже зробили МРТ поперекового чи шийного відділу хребта, та вам описали протрузію - відправте МРТ
+                на
+                viber чи telegram нашому лікарю для безкоштовної консультації.
+              </p>
+            </div>
 
-          <img class="nucleo-indications__item-img" src="images/indications/1.jpg"
-            alt="зображення здорового міжхребцевого диску та зміненого внаслідок протрузії">
-
-          <img class="nucleo-indications__item-img" src="images/indications/2.jpg"
-            alt="зображення здорового міжхребцевого диску та зміненого внаслідок грижі">
-
-          <div class="nucleo-indications__item">
-            <h3 class="nucleo-indications__item-title">
-              Грижа міжхребцевого диску
-            </h3>
-
-            <p class="nucleo-indications__item-text">
-              Це вихід вмісту міжхребцевого диску в спинномозковий канал. Для виявлення грижі міжхребцевого диска,
-              необхідно зробити МРТ.
-            </p>
-          </div>
-
-          <div class="nucleo-indications__item">
-            <h3 class="nucleo-indications__item-title">
-              Біль в спині, що віддає у ногу (при відсутності діагнозу)
-            </h3>
-
-            <p class="nucleo-indications__item-text nucleo-indications__item--question">
-              Чому проблема в спині, а болить також нога?
-            </p>
-
-            <p class="nucleo-indications__item-text nucleo-indications__item--question">
-              Що таке защемлення стегнового нерву?
-            </p>
-
-            <p class="nucleo-indications__item-text">
-              Стегновий нерв формується з поперекових спинномозкових корінців, потім ці корінці переплітаються між собою
-              й утворюють основний стовбур стегнового нерву, саме тому болить поперек і віддає в ногу.
-            </p>
-          </div>
-
-          <img class="nucleo-indications__item-img" src="images/indications/3.jpg"
-            alt="зображення болю в спині з іррадіацією в ногу">
-        </div>
-      </div>
-    </section>
-
-    <section class="nucleo-info">
-      <div class="container">
-        <ul class="nucleo-info__list">
-
-          <li class="nucleo-info__item">
-            <p class="animate__animated wow animate__fadeInRight nucleo-info__text">
-              <b>Холодноплазменна нуклеопластика</b> — це малоінвазивна операція, суть якої полягає в
-              «випаровуванні»
-              плазмою
-              «зайвої» речовини диска. В результаті декомпресії диска, протрузія зникає, а разом з нею і всі
-              симптоми
-              захворювання.
-            </p>
+            <img class="nucleo-indications__item-img" src="images/indications/1.jpg"
+            alt="зображення здорового міжхребцевого диску та зміненого внаслідок протрузії" width="446" height="276">
           </li>
+            
+          <li class="nucleo-indications__item">
+            <img class="nucleo-indications__item-img" src="images/indications/2.jpg"
+            alt="зображення здорового міжхребцевого диску та зміненого внаслідок грижі" width="446" height="276">
 
-          <li class="nucleo-info__item">
-            <p class="animate__animated wow animate__fadeInLeft nucleo-info__text">
-              Хірург вводить в пошкоджений диск пункційну голку в електродом виключно під контролем рентгену, що
-              гарантує
-              безпечність процедури.
-            </p>
+            <div class="nucleo-indications__box">
+              <h3 class="nucleo-indications__item-title">
+                Грижа міжхребцевого диску
+              </h3>
+
+              <p class="nucleo-indications__item-text">
+                Це вихід вмісту міжхребцевого диску в спинномозковий канал. Для виявлення грижі міжхребцевого диска,
+                необхідно зробити МРТ.
+              </p>
+            </div>
           </li>
+          
+          <li class="nucleo-indications__item">
+            <div class="nucleo-indications__box">
+              <h3 class="nucleo-indications__item-title">
+                Біль в спині, що віддає у ногу (при відсутності діагнозу)
+              </h3>
 
-          <li class="nucleo-info__item">
-            <p class="animate__animated wow animate__fadeInLeft animate__delay-2s nucleo-info__text">
-              Втручання не пов’язане з болем, не вимагає післяопераційної реабілітації, не має протипоказань за віком.
-              Ускладнення практично не зустрічаються.
-            </p>
-          </li>
+              <p class="nucleo-indications__item-text nucleo-indications__item-text--question">
+                Чому проблема в спині, а болить також нога?
+              </p>
 
-          <li class="nucleo-info__item">
-            <p class="animate__animated wow animate__fadeInRight animate__delay-2s nucleo-info__text">
-              Полегшення, як правило, настає одразу ж після проведення процедури, але повне усунення всіх симптомів
-              відбувається через два місяці після операції. Цей період необхідний для згасання пов’язаного з протрузією
-              запального процесу, а також для відновлення пошкодженої нервової тканини.
-            </p>
-          </li>
+              <p class="nucleo-indications__item-text nucleo-indications__item-text--question">
+                Що таке защемлення стегнового нерву?
+              </p>
 
-          <li class="nucleo-info__item">
-            <p class="animate__animated wow animate__fadeInUp animate__delay-3s nucleo-info__text">
-              Нуклеопластика — більше 25 років є найбільш популярної процедурою при протрузіях та грижах, в провідних
-              клініках Європи та США.
-            </p>
+              <p class="nucleo-indications__item-text">
+                Стегновий нерв формується з поперекових спинномозкових корінців, потім ці корінці переплітаються між собою
+                й утворюють основний стовбур стегнового нерву, саме тому болить поперек і віддає в ногу.
+              </p>
+            </div>
+
+            <img class="nucleo-indications__item-img" src="images/indications/3.jpg"
+            alt="зображення болю в спині з іррадіацією в ногу" width="446" height="276">
           </li>
         </ul>
       </div>
     </section>
 
-    <section class="nucleo-benefits">
+    <section class="nucleo-info section">
+      <div class="container">
+        <div class="nucleo-info__wrapper"></div>
+          <p class="nucleo-info__text">
+            <dl class="nucleo-info__text-definition">
+              <dt class="nucleo-info__text--bold">
+                Холодноплазменна нуклеопластика
+              </dt>
+
+              <dd>
+                — це малоінвазивна операція, суть якої полягає в
+                «випаровуванні»
+                плазмою
+                «зайвої» речовини диска. В результаті декомпресії диска, протрузія зникає, а разом з нею і всі
+                симптоми
+                захворювання.
+              </dd>
+            </dl>
+          </p>
+
+          <p class="nucleo-info__text">
+            Хірург вводить в пошкоджений диск пункційну голку в електродом виключно під контролем рентгену, що
+            гарантує
+            безпечність процедури.
+          </p>
+
+          <p class="nucleo-info__text">
+            Втручання не пов’язане з болем, не вимагає післяопераційної реабілітації, не має протипоказань за віком.
+            Ускладнення практично не зустрічаються.
+          </p>
+          
+          <p class="nucleo-info__text">
+            Полегшення, як правило, настає одразу ж після проведення процедури, але повне усунення всіх симптомів
+            відбувається через два місяці після операції. Цей період необхідний для згасання пов’язаного з протрузією
+            запального процесу, а також для відновлення пошкодженої нервової тканини.
+          </p>
+          
+          <p class="nucleo-info__text">
+            Нуклеопластика — більше 25 років є найбільш популярної процедурою при протрузіях та грижах, в провідних
+            клініках Європи та США.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="nucleo-benefits section">
       <div class="container">
         <h2 class="nucleo-benefits__title title">
           Основні переваги нуклеопластики
@@ -569,7 +575,7 @@
       </div>
     </div>
 
-    <section class="registration" style="background-image: url('images/registration-bg.jpg');">
+    <section class="registration section" style="background-image: url('images/registration-bg.jpg');">
       <h2 class="animate__animated wow animate__pulse registration__title title">
         Перед процедурою необхідно обстежитися у лікаря
       </h2>
@@ -583,7 +589,7 @@
       </a>
     </section>
 
-    <section class="nucleo-reabillitation">
+    <section class="nucleo-reabillitation section">
       <div class="container">
         <h2 class="nucleo-reabillitation__title title">
           Этапи усунення болю в спині при грижі чи протрузії
@@ -635,7 +641,7 @@
 
           <li class="nucleo-reabillitation__item nucleo-reabillitation__item--five">
             <h3 class="nucleo-reabillitation__item-title">
-              2 години в стані покою
+              2 години в стані cпокою
             </h3>
 
             <p class="nucleo-reabillitation__item-text">
@@ -664,71 +670,51 @@
         </h2>
 
         <div class="reviews__wrapper">
-          <div class="reviews__info">
-            <ul class="reviews__info-list">
-              <li class="reviews__info-item">
-                <p class="reviews__info-text">
-                  <b>1. Пацієнтка: 74 роки</b>
-                </p>
-              </li>
+          <ul class="reviews__info">
+            <li class="reviews__info-item">
+              <p class="reviews__info-text">
+                <b>1. Пацієнтка: 74 роки</b>
+              </p>
 
-              <li class="reviews__info-item">
-                <p class="reviews__info-text">
-                  Скарги: на біль в попереку які віддають в обидві ноги.
-                </p>
-              </li>
+              <p class="reviews__info-text">
+                Скарги: на біль в попереку які віддають в обидві ноги.
+              </p>
 
-              <li class="reviews__info-item">
-                <p class="reviews__info-text">
-                  Хворіє протягом тривалого часу.
-                </p>
-              </li>
+              <p class="reviews__info-text">
+                Хворіє протягом тривалого часу.
+              </p>
 
-              <li class="reviews__info-item">
-                <p class="reviews__info-text">
-                  Діагноз: Грижа міжхребцевого диска на рівні L4-L5.
-                </p>
-              </li>
+              <p class="reviews__info-text">
+                Діагноз: Грижа міжхребцевого диска на рівні L4-L5.
+              </p>
 
-              <li class="reviews__info-item">
-                <p class="reviews__info-text">
-                  Процедура: Холодноплазменна нуклеопластика.
-                </p>
-              </li>
-            </ul>
+              <p class="reviews__info-text">
+                Процедура: Холодноплазменна нуклеопластика.
+              </p>
+            </li>
 
-            <ul class="reviews__info-list">
-              <li class="reviews__info-item">
-                <p class="reviews__info-text">
-                  <b>2. Пацієнт: 63 роки</b>
-                </p>
-              </li>
+            <li class="reviews__info-item">
+              <p class="reviews__info-text">
+                <b>2. Пацієнт: 63 роки</b>
+              </p>
 
-              <li class="reviews__info-item">
-                <p class="reviews__info-text">
-                  Скарги: на біль в попереку які віддають в праву ногу.
-                </p>
-              </li>
+              <p class="reviews__info-text">
+                Скарги: на біль в попереку які віддають в праву ногу.
+              </p>
 
-              <li class="reviews__info-item">
-                <p class="reviews__info-text">
-                  Хворіє протягом одного тижня.
-                </p>
-              </li>
+              <p class="reviews__info-text">
+                Хворіє протягом одного тижня.
+              </p>
 
-              <li class="reviews__info-item">
-                <p class="reviews__info-text">
-                  Діагноз: Грижа міжхребцевого диска на рівні L5-S1 праворуч.
-                </p>
-              </li>
+              <p class="reviews__info-text">
+                Діагноз: Грижа міжхребцевого диска на рівні L5-S1 праворуч.
+              </p>
 
-              <li class="reviews__info-item">
-                <p class="reviews__info-text">
-                  Процедура: Холодноплазменна нуклеопластика.
-                </p>
-              </li>
-            </ul>
-          </div>
+              <p class="reviews__info-text">
+                Процедура: Холодноплазменна нуклеопластика.
+              </p>
+            </li>
+          </ul>
 
           <iframe width="560" height="315" src="https://www.youtube.com/embed/u8bNS9s0lk4" title="YouTube video player"
             frameborder="0"
@@ -783,15 +769,11 @@
       </div>
     </div>
 
-    <section class="descr" id="neuro" style="background-image: url('images/descr-bg.jpg')">
+    <section class="descr section" id="neuro" style="background-image: url('images/descr-bg.jpg')">
       <div class="container">
         <h2 class="descr__title title">
           Нейромодуляція
         </h2>
-
-        <span class="descr__line">
-
-        </span>
 
         <p class="descr__text">
           Суть методу полягає в блокуванні проведення неприємних больових імпульсів з спини та нижніх кінцівок до
@@ -803,9 +785,17 @@
         </p>
 
         <ul class="descr__list">
-          <li class="descr__item" style="background-image: url('images/neuro/1.jpg');"></li>
-          <li class="descr__item" style="background-image: url('images/neuro/2.jpg');"></li>
-          <li class="descr__item" style="background-image: url('images/neuro/3.jpg');"></li>
+          <li class="descr__item">
+            <img class="descr__img" src="images/neuro/1.jpg" alt="зображення процесу виконання процедури" width="250" height="150">
+          </li>
+
+          <li class="descr__item">
+            <img class="descr__img" src="images/neuro/2.jpg" alt="зображення процесу виконання процедури" width="250" height="150">
+          </li>
+
+          <li class="descr__item">
+            <img class="descr__img" src="images/neuro/3.jpg" alt="зображення процесу виконання процедури" width="250" height="150">
+          </li>
         </ul>
       </div>
     </section>
@@ -860,15 +850,11 @@
       </div>
     </div>
 
-    <section class="descr" id="syndrom" style="background-image: url('images/descr-bg.jpg')">
+    <section class="descr section" id="syndrom" style="background-image: url('images/descr-bg.jpg')">
       <div class="container">
         <h2 class="descr__title title">
           Синдром карпального каналу
         </h2>
-
-        <span class="descr__line">
-
-        </span>
 
         <p class="descr__text">
           Синдром карпального каналу – захворювання, що виникає внаслідок стиснення серединного нерву потовщеною
@@ -893,9 +879,17 @@
         </p>
 
         <ul class="descr__list">
-          <li class="descr__item" style="background-image: url('images/carpal/1.jpg');"></li>
-          <li class="descr__item" style="background-image: url('images/carpal/2.jpg');"></li>
-          <li class="descr__item" style="background-image: url('images/carpal/3.jpg');"></li>
+          <li class="descr__item">
+            <img class="descr__img" src="images/carpal/1.jpg" alt="зображення процесу виконання процедури" width="250" height="150">
+          </li>
+          
+          <li class="descr__item">
+            <img class="descr__img" src="images/carpal/2.jpg" alt="зображення процесу виконання процедури" width="250" height="150">
+          </li>
+          
+          <li class="descr__item">
+            <img class="descr__img" src="images/carpal/3.jpg" alt="зображення процесу виконання процедури" width="250" height="150">
+          </li>
         </ul>
       </div>
     </section>
@@ -916,15 +910,11 @@
       </div>
     </div>
 
-    <section class="descr" style="background-image: url('images/descr-bg.jpg')">
+    <section class="descr section" style="background-image: url('images/descr-bg.jpg')">
       <div class="container">
         <h2 class="descr__title title">
           Синдром кубітального каналу
         </h2>
-
-        <span class="descr__line">
-
-        </span>
 
         <p class="descr__text">
           Синдром кубітального (ліктьового) каналу знаходиться на другому місці по частоті серед тунельних нейропатій
@@ -936,22 +926,26 @@
         </p>
 
         <ul class="descr__list">
-          <li class="descr__item" style="background-image: url('images/cubital/1.jpg');"></li>
-          <li class="descr__item" style="background-image: url('images/cubital/2.jpg');"></li>
-          <li class="descr__item" style="background-image: url('images/cubital/3.jpg');"></li>
+          <li class="descr__item">
+            <img class="descr__img" src="images/cubital/1.jpg" alt="зображення процесу виконання процедури" width="250" height="150">
+          </li>
+
+          <li class="descr__item">
+            <img class="descr__img" src="images/cubital/2.jpg" alt="зображення процесу виконання процедури" width="250" height="150">
+          </li>
+
+          <li class="descr__item">
+            <img class="descr__img" src="images/cubital/3.jpg" alt="зображення процесу виконання процедури" width="250" height="150">
+          </li>
         </ul>
       </div>
     </section>
 
-    <section class="descr" id="nevro" style="background-image: url('images/descr-bg.jpg')">
+    <section class="descr section" id="nevro" style="background-image: url('images/descr-bg.jpg')">
       <div class="container">
         <h2 class="descr__title title">
           Невралгія трійчастого нерва
         </h2>
-
-        <span class="descr__line">
-
-        </span>
 
         <p class="descr__text">
           Трійчаста невралгія — патологічний стан, який характеризується раптовим виникненням сильного пекучого болю.
@@ -966,9 +960,19 @@
         </p>
 
         <ul class="descr__list">
-          <li class="descr__item" style="background-image: url('images/nevro/1.jpg');"></li>
-          <li class="descr__item" style="background-image: url('images/nevro/2.jpg');"></li>
-          <li class="descr__item" style="background-image: url('images/nevro/3.jpg');"></li>
+          <li class="descr__item">
+            <img class="descr__img" src="images/nevro/1.jpg" alt="зображення процесу виконання процедури" width="250" height="150">
+          </li>
+
+          <li class="descr__item">
+            <img class="descr__img" src="images/nevro/2.jpg" alt="зображення процесу виконання процедури" width="250"
+              height="150">
+          </li>
+
+          <li class="descr__item">
+            <img class="descr__img" src="images/nevro/3.jpg" alt="зображення процесу виконання процедури" width="250"
+              height="150">
+          </li>
         </ul>
       </div>
     </section>
@@ -1023,15 +1027,11 @@
       </div>
     </div>
 
-    <section class="descr" id="vertebro" style="background-image: url('images/descr-bg.jpg')">
+    <section class="descr section" id="vertebro" style="background-image: url('images/descr-bg.jpg')">
       <div class="container">
         <h2 class="descr__title title">
           Вертебропластика
         </h2>
-
-        <span class="descr__line">
-
-        </span>
 
         <p class="descr__text">
           Вертебропластика — це мінімально інвазивна операція, метою якої є фіксація перелому хребця й усунення болю,
@@ -1041,22 +1041,29 @@
         </p>
 
         <ul class="descr__list">
-          <li class="descr__item" style="background-image: url('images/vertebro/1.jpg');"></li>
-          <li class="descr__item" style="background-image: url('images/vertebro/2.jpg');"></li>
-          <li class="descr__item" style="background-image: url('images/vertebro/3.jpg');"></li>
+          <li class="descr__item">
+            <img class="descr__img" src="images/vertebro/1.jpg" alt="зображення процесу виконання процедури" width="250"
+              height="150">
+          </li>
+
+          <li class="descr__item">
+            <img class="descr__img" src="images/vertebro/2.jpg" alt="зображення процесу виконання процедури" width="250"
+              height="150">
+          </li>
+
+          <li class="descr__item">
+            <img class="descr__img" src="images/vertebro/3.jpg" alt="зображення процесу виконання процедури" width="250"
+              height="150">
+          </li>
         </ul>
       </div>
     </section>
 
-    <section class="descr" id="micro" style="background-image: url('images/descr-bg.jpg')">
+    <section class="descr section" id="micro" style="background-image: url('images/descr-bg.jpg')">
       <div class="container">
         <h2 class="descr__title title">
           Мікродискектомія
         </h2>
-
-        <span class="descr__line">
-
-        </span>
 
         <p class="descr__text">
           Опреція проводиться під спінальною анестезією (пацієнт перебуває у свідомості лише не відчуває болю).
@@ -1069,9 +1076,20 @@
         </p>
 
         <ul class="descr__list">
-          <li class="descr__item" style="background-image: url('images/micro/1.jpg');"></li>
-          <li class="descr__item" style="background-image: url('images/micro/2.jpg');"></li>
-          <li class="descr__item" style="background-image: url('images/micro/3.jpg');"></li>
+          <li class="descr__item">
+            <img class="descr__img" src="images/micro/1.jpg" alt="зображення процесу виконання процедури" width="250"
+              height="150">
+          </li>
+
+          <li class="descr__item">
+            <img class="descr__img" src="images/micro/2.jpg" alt="зображення процесу виконання процедури" width="250"
+              height="150">
+          </li>
+
+          <li class="descr__item">
+            <img class="descr__img" src="images/micro/3.jpg" alt="зображення процесу виконання процедури" width="250"
+              height="150">
+          </li>
         </ul>
       </div>
     </section>
@@ -1126,31 +1144,25 @@
       </div>
     </div>
 
-    <section class="contact" id="contact">
+    <section class="contact section" id="contact">
       <div class="container">
         <div class="contact__wrapper">
           <div class="contact__info">
-            <h3 class="contact__info-title">
+            <h2 class="contact__info-title">
               Наші контакти
-            </h3>
+            </h2>
 
             <ul class="contact__info-list">
               <li class="contact__info-item">
-                <p class="contact__info-text">
-                  м. Київ, вул. В. Чорновола, 12
-                </p>
+                м. Київ, вул. В. Чорновола, 12
               </li>
 
               <li class="contact__info-item">
-                <p class="contact__info-text">
-                  м. Бровари, вул. Симоненка, 4
-                </p>
+                м. Бровари, вул. Симоненка, 4
               </li>
 
               <li class="contact__info-item">
-                <p class="contact__info-text">
-                  м. Бориспіль, вул. Котляревського, 1
-                </p>
+                м. Бориспіль, вул. Котляревського, 1
               </li>
             </ul>
 
@@ -1161,22 +1173,24 @@
             <ul class="contact__info-social-list">
               <li class="contact__info-social-item">
                 <a href="https://www.facebook.com/neurocenter.com.ua" class="contact__info-social-link">
-                  <svg class="contact__info-social-icon" width="30px" height="30px" viewBox="0 0 100 100"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                      d="M50 100c27.614 0 50-22.386 50-50S77.614 0 50 0 0 22.386 0 50s22.386 50 50 50Zm3.536-76.983c-2.883.08-5.925.774-8.074 2.816-1.775 1.641-2.67 4.03-2.87 6.419-.061 1.708-.053 3.42-.044 5.133.007 1.284.013 2.567-.01 3.848-.789.006-1.58.005-2.372.003a190.732 190.732 0 0 0-3.166.01l.003 3.071c.003 2.053.006 4.109-.003 6.165 1.053.015 2.11.013 3.166.01.792 0 1.583-.002 2.372.003.018 4.076.015 8.15.012 12.225-.005 5.094-.009 10.187.029 15.28 2.165-.014 4.327-.012 6.489-.01 1.621.002 3.243.003 4.868-.003.013-4.584.01-9.165.007-13.746-.004-4.58-.007-9.161.006-13.746 1.093-.005 2.185-.004 3.278-.002 1.456.002 2.913.004 4.37-.011.453-3.07.84-6.166 1.053-9.275-1.44-.007-2.882-.007-4.323-.007-1.442 0-2.883 0-4.324-.007L54 39.582c-.002-1.612-.005-3.223.015-4.835.227-1.241 1.508-2.189 2.75-2.108h5.898c.013-3.217.013-6.42 0-9.636l-2.282-.001a694.454 694.454 0 0 0-6.846.015Z">
-                    </path>
+                  <svg class="contact__info-social-icon" width="30" height="30">
+                    <use xlink:href="images/icons/sprite.svg#facebook"></use>
                   </svg>
                 </a>
               </li>
 
               <li class="contact__info-social-item">
                 <a href="https://t.me/neurocenterua" class="contact__info-social-link">
-                  <svg class="contact__info-social-icon" width="30px" height="30px" viewBox="0 0 100 100"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                      d="M50 100c27.614 0 50-22.386 50-50S77.614 0 50 0 0 22.386 0 50s22.386 50 50 50Zm21.977-68.056c.386-4.38-4.24-2.576-4.24-2.576-3.415 1.414-6.937 2.85-10.497 4.302-11.04 4.503-22.444 9.155-32.159 13.734-5.268 1.932-2.184 3.864-2.184 3.864l8.351 2.577c3.855 1.16 5.91-.129 5.91-.129l17.988-12.238c6.424-4.38 4.882-.773 3.34.773l-13.49 12.882c-2.056 1.804-1.028 3.35-.129 4.123 2.55 2.249 8.82 6.364 11.557 8.16.712.467 1.185.778 1.292.858.642.515 4.111 2.834 6.424 2.319 2.313-.516 2.57-3.479 2.57-3.479l3.083-20.226c.462-3.511.993-6.886 1.417-9.582.4-2.546.705-4.485.767-5.362Z">
-                    </path>
+                  <svg class="contact__info-social-icon" width="30" height="30">
+                    <use xlink:href="images/icons/sprite.svg#telegram"></use>
+                  </svg>
+                </a>
+              </li>
+
+              <li class="contact__info-social-item">
+                <a href="viber://chat?number=%2B380956448159" class="contact__info-social-link">
+                  <svg class="contact__info-social-icon" width="30" height="30">
+                    <use xlink:href="images/icons/sprite.svg#viber"></use>
                   </svg>
                 </a>
               </li>
@@ -1185,7 +1199,7 @@
 
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5074.357757034669!2d30.76876182804851!3d50.512238417935684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4d94a09968c85%3A0xf3d474a5aed88c34!2zItCV0L3QtdGA0LPRltGPIiDQntC30LTQvtGA0L7QstGH0LjQuSDQptC10L3RgtGAINCa0ZbQvdC10LfRltC-0YLQtdGA0LDQv9GW0Zc!5e0!3m2!1suk!2sua!4v1665524659106!5m2!1suk!2sua"
-            width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+            width="600" height="350" style="border:0;" allowfullscreen="" loading="lazy"
             referrerpolicy="no-referrer-when-downgrade">
           </iframe>
         </div>
@@ -1194,13 +1208,27 @@
           <h3 class="contact__title">Записатись на прийом</h3>
 
           <form class="contact__form">
-            <input class="contact__input" type="text" placeholder="Як Вас звати?">
-            <input class="contact__input" type="tel" placeholder="Ваш номер телефону">
-            <button class="contact__btn" type="submit">Відправити</button>
+            <label class="contact__label">
+              <input class="contact__input" type="text" placeholder="Як Вас звати?" required>
+            </label>
+            
+            <label class="contact__label">
+              <input class="contact__input" type="tel" placeholder="Ваш номер телефону" required>
+            </label>
+
+            <button class="contact__btn btn" type="submit">
+              Відправити
+            </button>
           </form>
         </div>
       </div>
     </section>
+
+    <a class="go-top" href="#home">
+      <span class="sr-only">
+        повернутись на початок сторінки
+      </span>
+    </a>
   </main>
 
   <footer class="footer">

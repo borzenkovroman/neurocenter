@@ -1,0 +1,81 @@
+.nucleo-reabillitation {
+  color: $title;
+
+  &__title {
+    font-size: 40px;
+    margin-bottom: 40px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 40px 30px;
+  }
+
+  &__item {
+    position: relative;
+    padding-left: 60px;
+    max-width: 360px;
+
+    &::before {
+      content: '';
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+      position: absolute;
+      left: 0;
+      top: 0;
+      display: block;
+      width: 40px;
+      height: 40px;
+    }
+
+    &--one {
+      &::before {
+        content: '';
+        background-image: url('../images/icons/1.svg');
+      }
+    }
+
+    &--two {
+      &::before {
+        content: '';
+        background-image: url('../images/icons/2.svg');
+      }
+    }
+
+    &--three {
+      &::before {
+        content: '';
+        background-image: url('../images/icons/3.svg');
+      }
+    }
+
+    &--four {
+      &::before {
+        content: '';
+        background-image: url('../images/icons/4.svg');
+      }
+    }
+
+    &--five {
+      &::before {
+        content: '';
+        background-image: url('../images/icons/5.svg');
+      }
+    }
+
+    &--six {
+      &::before {
+        content: '';
+        background-image: url('../images/icons/6.svg');
+      }
+    }
+
+    &-title {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+  }
+}
