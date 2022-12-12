@@ -18,7 +18,7 @@
 </head>
 
 <body id="body">
-  <div class="hero" id="home" style="background-image: url('images/hero-bg.jpg');">
+  <div class="hero" id="home" style="background-image: url('./images/hero-bg.webp');">
     <div class="container">
       <header class="header">
         <nav class="menu">
@@ -43,7 +43,7 @@
             </svg>
             
             <svg class="phone-call__arrow" width="60" height="60">
-              <use xlink:href="images/icons/sprite.svg#phone-call"></use>
+              <use xlink:href="./images/icons/sprite.svg#phone-call"></use>
             </svg>
           </a>
 
@@ -74,20 +74,20 @@
 
       <div class="hero__content">
         <h1 class="hero__title">
-          <span class="animate__animated wow animate__fadeInDown hero__overtitle">
+          <span class="hero__overtitle">
             Бережемо найцінніше
           </span>
 
           Нейроцентр
 
-          <span class="animate__animated wow animate__fadeInRight animate__delay-1s hero__subtitle">
+          <span class="hero__subtitle">
             Лікування захворювань хребта без розрізу та наркозу
           </span>
         </h1>
 
         <a class="hero__link" href="#about">
           <svg width="40" height="20">
-            <use xlink:href="images/icons/sprite.svg#arrow-down"></use>
+            <use xlink:href="./images/icons/sprite.svg#arrow-down"></use>
           </svg>
 
           <span class="sr-only">
@@ -102,9 +102,9 @@
     <section class="about section" id="about">
       <div class="container">
         <div class="about__video">
-          <a data-fancybox class="animate__animated wow animate__backInUp about__video-link"
+          <a data-fancybox class="about__video-link"
             href="https://www.youtube.com/watch?v=IQpPauiXeOU&t=1s"
-            style="background-image: url('images/video-image.jpg');">
+            style="background-image: url('../images/descr/operation-bottom.jpg');">
             <span class="sr-only">відео про нейрохірурга Сергія Борзенкова</span>
           </a>
         </div>
@@ -115,15 +115,49 @@
       <div class="blog__container">
         <div class="blog__wrapper">
           <div class="blog__item">
-            <img class="blog__img" src="images/blog/1.jpg" width="300" height="250" alt="типові місця виникнення болю">
+            <picture>
+              <source 
+                srcset="./images/blog/1.jpg 1x, ./images/blog/1-2x.jpg 2x"
+                media="(min-width:992px)">  
+              <source 
+                srcset="./images/blog/1-desc.jpg 1x, ./images/blog/1-desc-2x.jpg 2x"
+                media="(min-width:786px)">
+              <source 
+                srcset="./images/blog/1-tab.jpg 1x, ./images/blog/1-tab-2x.jpg 2x"
+                media="(min-width:576px)">
+              <source 
+                srcset="./images/blog/1-mob.webp"
+                media="(max-width:576px)">
+              <img class="blog__img" src="./images/blog/1.jpg" width="1920" height="864" alt="типові місця виникнення болю">
+            </picture>
           </div>
 
           <div class="blog__item">
-            <img class="blog__img" src="images/blog/2.jpg" width="300" height="250" alt="біль в поперековому відділі хребта">
+            <picture>
+              <source 
+                srcset="./images/blog/2.jpg 1x, ./images/blog/2-2x.jpg 2x"
+                media="(min-width:992px)">  
+              <source 
+                srcset="./images/blog/2-desc.jpg 1x, ./images/blog/2-desc-2x.jpg 2x"
+                media="(min-width:786px)">
+              <source 
+                srcset="./images/blog/2-tab.jpg 1x, ./images/blog/2-tab-2x.jpg 2x"
+                media="(min-width:576px)">
+              <source 
+                srcset="./images/blog/2-mob.webp"
+                media="(max-width:576px)">
+              <img class="blog__img" src="./images/blog/2.jpg" width="1920" height="864" alt="біль в поперековому відділі хребта">
+            </picture>
           </div>
 
           <div class="blog__item">
-            <img class="blog__img" src="images/blog/3.jpg" width="300" height="250" alt="зображення будови хребта">
+            <picture>
+              <source srcset="./images/blog/3.jpg 1x, ./images/blog/3-2x.jpg 2x" media="(min-width:992px)">
+              <source srcset="./images/blog/3-desc.jpg 1x, ./images/blog/3-desc-2x.jpg 2x" media="(min-width:786px)">
+              <source srcset="./images/blog/3-tab.jpg 1x, ./images/blog/3-tab-2x.jpg 2x" media="(min-width:576px)">
+              <source srcset="./images/blog/3-mob.webp" media="(max-width:576px)">
+              <img class="blog__img" src="./images/blog/3.jpg" width="1920" height="864" alt="зображення будови хребта">
+            </picture>
           </div>
         </div>
       </div>
@@ -137,7 +171,7 @@
 
         <ul class="methods__box">
           <li class="methods__box-item methods--one">
-            <a class="animate__animated wow animate__fadeInLeftBig methods__item" href="#neuro">
+            <a class="methods__item" href="#neuro">
               <div class="methods__item-link">
                 <div class="methods__item-top">
                   <h3 class="methods__item-title">
@@ -157,7 +191,7 @@
           </li>
 
           <li class="methods__box-item methods--two">
-            <a class="animate__animated wow animate__fadeInLeftBig methods__item" href="#nucleo">
+            <a class="methods__item" href="#nucleo">
               <div class="methods__item-link">
                 <div class="methods__item-top">
                   <h3 class="methods__item-title">
@@ -177,7 +211,7 @@
           </li>
 
           <li class="methods__box-item methods--three">
-            <a class="animate__animated wow animate__fadeInLeftBig methods__item" href="#nevro">
+            <a class="methods__item" href="#nevro">
               <div class="methods__item-link">
                 <div class="methods__item-top">
                   <h3 class="methods__item-title">
@@ -197,7 +231,7 @@
           </li>
 
           <li class="methods__box-item methods--four">
-            <a class="animate__animated wow animate__fadeInRightBig methods__item" href="#vertebro">
+            <a class="methods__item" href="#vertebro">
               <div class="methods__item-link">
                 <div class="methods__item-top">
                   <h3 class="methods__item-title">
@@ -217,7 +251,7 @@
           </li>
 
           <li class="methods__box-item methods--five">
-            <a class="animate__animated wow animate__fadeInRightBig methods__item" href="#syndrom">
+            <a class="methods__item" href="#syndrom">
               <div class="methods__item-link">
                 <div class="methods__item-top">
                   <h3 class="methods__item-title">
@@ -237,7 +271,7 @@
           </li>
 
           <li class="methods__box-item methods--six">
-            <a class="animate__animated wow animate__fadeInRightBig methods__item" href="#micro">
+            <a class="methods__item" href="#micro">
               <div class="methods__item-link">
                 <div class="methods__item-top">
                   <h3 class="methods__item-title">
@@ -270,7 +304,7 @@
         </p>
 
         <ul class="expertise__list">
-          <li class="animate__animated wow animate__fadeInTopLeft expertise__item expertise__item--star">
+          <li class="expertise__item expertise__item--star">
             <h3 class="expertise__item-title">
               Без розрізу
             </h3>
@@ -281,7 +315,7 @@
             </p>
           </li>
 
-          <li class="animate__animated wow animate__fadeInTopRight animate__delay-1s expertise__item
+          <li class="expertise__item
             expertise__item--dialogue">
             <h3 class="expertise__item-title">
               Без наркозу
@@ -292,7 +326,7 @@
             </p>
           </li>
 
-          <li class="animate__animated wow animate__fadeInBottomLeft animate__delay-1s expertise__item
+          <li class="expertise__item
             expertise__item--money">
             <h3 class="expertise__item-title">
               Процедура одного дня
@@ -303,7 +337,7 @@
             </p>
           </li>
 
-          <li class="animate__animated wow animate__fadeInBottomRight expertise__item expertise__item--user">
+          <li class="expertise__item expertise__item--user">
             <h3 class="expertise__item-title">
               Гарантія результату без таблеток та уколів
             </h3>
@@ -316,7 +350,7 @@
       </div>
     </section>
 
-    <section class="descr section" id="nucleo" style="background-image: url('images/descr-bg.jpg')">
+    <section class="descr section" id="nucleo" style="background-image: url('images/descr-bg.webp')">
       <div class="container">
         <h2 class="descr__title title">
           Нуклеопластика
@@ -335,15 +369,25 @@
 
         <ul class="descr__list">
           <li class="descr__item">
-            <img class="descr__img" src="images/nucleo/1.jpg" alt="зображення процесу виконання процедури" width="250" height="150">
+            <picture>
+              <source srcset="./images/descr/needle-mob.webp" media="(max-width:576px)">
+              <img class="descr__img" src="images/descr/needle.webp" alt="зображення процесу виконання процедури" width="363" height="200">
+            </picture>
           </li>
 
           <li class="descr__item">
-            <img class="descr__img" src="images/nucleo/2.jpg" alt="зображення процесу виконання процедури" width="250" height="150">
+            <picture>
+              <source srcset="./images/descr/nucleo-mob.webp" media="(max-width:576px)">
+              <img class="descr__img" src="images/descr/nucleo.webp" alt="зображення процесу виконання процедури" width="363" height="200">
+            </picture>
           </li>
 
           <li class="descr__item">
-            <img class="descr__img" src="images/nucleo/3.jpg" alt="зображення процесу виконання процедури" width="250" height="150">
+            <picture>
+              <source srcset="./images/descr/operation-aside-mob.webp" media="(max-width:576px)">
+              <img class="descr__img" src="images/descr/operation-aside.webp" alt="зображення процесу виконання процедури" width="363" height="200">
+            </picture>
+            
           </li>
         </ul>
       </div>
@@ -426,7 +470,6 @@
 
     <section class="nucleo-info section">
       <div class="container">
-        <div class="nucleo-info__wrapper"></div>
           <p class="nucleo-info__text">
             <dl class="nucleo-info__text-definition">
               <dt class="nucleo-info__text--bold">
@@ -562,7 +605,7 @@
             </p>
           </div>
 
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/cLN3Vd64vXk" title="YouTube video player"
+          <iframe width="560" height="315" loading="lazy" src="https://www.youtube.com/embed/cLN3Vd64vXk" title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen>
@@ -575,8 +618,8 @@
       </div>
     </div>
 
-    <section class="registration section" style="background-image: url('images/registration-bg.jpg');">
-      <h2 class="animate__animated wow animate__pulse registration__title title">
+    <section class="registration section" style="background-image: url('images/registration-bg.webp');">
+      <h2 class="registration__title title">
         Перед процедурою необхідно обстежитися у лікаря
       </h2>
 
@@ -716,7 +759,8 @@
             </li>
           </ul>
 
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/u8bNS9s0lk4" title="YouTube video player"
+          <iframe width="560" height="315" loading="lazy" src="https://www.youtube.com/embed/u8bNS9s0lk4"
+            title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen>
@@ -760,7 +804,8 @@
             </ul>
           </div>
 
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/RqAoQIWJmi4" title="YouTube video player"
+          <iframe width="560" height="315" loading="lazy" src="https://www.youtube.com/embed/RqAoQIWJmi4"
+            title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen>
@@ -769,7 +814,7 @@
       </div>
     </div>
 
-    <section class="descr section" id="neuro" style="background-image: url('images/descr-bg.jpg')">
+    <section class="descr section" id="neuro" style="background-image: url('images/descr-bg.webp')">
       <div class="container">
         <h2 class="descr__title title">
           Нейромодуляція
@@ -786,15 +831,24 @@
 
         <ul class="descr__list">
           <li class="descr__item">
-            <img class="descr__img" src="images/neuro/1.jpg" alt="зображення процесу виконання процедури" width="250" height="150">
+            <picture>
+              <source srcset="./images/descr/neuro-mob.webp" media="(max-width:576px)">
+              <img class="descr__img" src="images/descr/neuro.webp" alt="зображення процесу виконання процедури" width="363" height="200">
+            </picture>
           </li>
 
           <li class="descr__item">
-            <img class="descr__img" src="images/neuro/2.jpg" alt="зображення процесу виконання процедури" width="250" height="150">
+            <picture>
+              <source srcset="./images/descr/operation-main-mob.webp" media="(max-width:576px)">
+              <img class="descr__img" src="images/descr/operation-main.webp" alt="зображення процесу виконання процедури" width="363" height="200">
+            </picture>
           </li>
 
           <li class="descr__item">
-            <img class="descr__img" src="images/neuro/3.jpg" alt="зображення процесу виконання процедури" width="250" height="150">
+            <picture>
+              <source srcset="./images/descr/operation-bottom-mob.webp" media="(max-width:576px)">
+              <img class="descr__img" src="images/descr/operation-bottom.webp" alt="зображення процесу виконання процедури" width="363" height="200">
+            </picture>
           </li>
         </ul>
       </div>
@@ -841,7 +895,8 @@
             </ul>
           </div>
 
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/ETdefvEexK4" title="YouTube video player"
+          <iframe width="560" height="315" loading="lazy" src="https://www.youtube.com/embed/ETdefvEexK4"
+            title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen>
@@ -850,7 +905,7 @@
       </div>
     </div>
 
-    <section class="descr section" id="syndrom" style="background-image: url('images/descr-bg.jpg')">
+    <section class="descr section" id="syndrom" style="background-image: url('images/descr-bg.webp')">
       <div class="container">
         <h2 class="descr__title title">
           Синдром карпального каналу
@@ -880,15 +935,24 @@
 
         <ul class="descr__list">
           <li class="descr__item">
-            <img class="descr__img" src="images/carpal/1.jpg" alt="зображення процесу виконання процедури" width="250" height="150">
+            <picture>
+              <source srcset="./images/descr/operation-main-mob.webp" media="(max-width:576px)">
+              <img class="descr__img" src="images/descr/operation-main.webp" alt="зображення процесу виконання процедури" width="363" height="200">
+            </picture>
           </li>
           
           <li class="descr__item">
-            <img class="descr__img" src="images/carpal/2.jpg" alt="зображення процесу виконання процедури" width="250" height="150">
+            <picture>
+              <source srcset="./images/descr/operation-bottom-mob.webp" media="(max-width:576px)">
+              <img class="descr__img" src="images/descr/operation-bottom.webp" alt="зображення процесу виконання процедури" width="363" height="200">
+            </picture>
           </li>
           
           <li class="descr__item">
-            <img class="descr__img" src="images/carpal/3.jpg" alt="зображення процесу виконання процедури" width="250" height="150">
+            <picture>
+              <source srcset="./images/descr/neuro-mob.webp" media="(max-width:576px)">
+              <img class="descr__img" src="images/descr/neuro.webp" alt="зображення процесу виконання процедури" width="363" height="200">
+            </picture>
           </li>
         </ul>
       </div>
@@ -901,7 +965,8 @@
         </h2>
 
         <div class="reviews__noname">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/UnZDNVTyYHw" title="YouTube video player"
+          <iframe width="560" height="315" loading="lazy" src="https://www.youtube.com/embed/UnZDNVTyYHw"
+            title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen>
@@ -910,7 +975,7 @@
       </div>
     </div>
 
-    <section class="descr section" style="background-image: url('images/descr-bg.jpg')">
+    <section class="descr section" style="background-image: url('images/descr-bg.webp')">
       <div class="container">
         <h2 class="descr__title title">
           Синдром кубітального каналу
@@ -927,21 +992,30 @@
 
         <ul class="descr__list">
           <li class="descr__item">
-            <img class="descr__img" src="images/cubital/1.jpg" alt="зображення процесу виконання процедури" width="250" height="150">
+            <picture>
+              <source srcset="./images/descr/operation-bottom-mob.webp" media="(max-width:576px)">
+              <img class="descr__img" src="images/descr/operation-bottom.webp" alt="зображення процесу виконання процедури" width="363" height="200">
+            </picture>
           </li>
 
           <li class="descr__item">
-            <img class="descr__img" src="images/cubital/2.jpg" alt="зображення процесу виконання процедури" width="250" height="150">
+            <picture>
+              <source srcset="./images/descr/operation-main-mob.webp" media="(max-width:576px)">
+              <img class="descr__img" src="images/descr/operation-main.webp" alt="зображення процесу виконання процедури" width="363" height="200">
+            </picture>
           </li>
 
           <li class="descr__item">
-            <img class="descr__img" src="images/cubital/3.jpg" alt="зображення процесу виконання процедури" width="250" height="150">
+            <picture>
+              <source srcset="./images/descr/neuro-mob.webp" media="(max-width:576px)">
+              <img class="descr__img" src="images/descr/neuro.webp" alt="зображення процесу виконання процедури" width="363" height="200">
+            </picture>
           </li>
         </ul>
       </div>
     </section>
 
-    <section class="descr section" id="nevro" style="background-image: url('images/descr-bg.jpg')">
+    <section class="descr section" id="nevro" style="background-image: url('images/descr-bg.webp')">
       <div class="container">
         <h2 class="descr__title title">
           Невралгія трійчастого нерва
@@ -961,17 +1035,26 @@
 
         <ul class="descr__list">
           <li class="descr__item">
-            <img class="descr__img" src="images/nevro/1.jpg" alt="зображення процесу виконання процедури" width="250" height="150">
+            <picture>
+              <source srcset="./images/descr/nevro-mob.webp" media="(max-width:576px)">
+              <img class="descr__img" src="images/descr/nevro.webp" alt="зображення процесу виконання процедури" width="363" height="200">
+            </picture>
           </li>
 
           <li class="descr__item">
-            <img class="descr__img" src="images/nevro/2.jpg" alt="зображення процесу виконання процедури" width="250"
-              height="150">
+            <picture>
+              <source srcset="./images/descr/operation-main-mob.webp" media="(max-width:576px)">
+              <img class="descr__img" src="images/descr/operation-main.webp" alt="зображення процесу виконання процедури" width="363"
+              height="200">
+            </picture>
           </li>
 
           <li class="descr__item">
-            <img class="descr__img" src="images/nevro/3.jpg" alt="зображення процесу виконання процедури" width="250"
-              height="150">
+            <picture>
+              <source srcset="./images/descr/operation-bottom-mob.webp" media="(max-width:576px)">
+              <img class="descr__img" src="images/descr/operation-bottom.webp" alt="зображення процесу виконання процедури" width="363"
+              height="200">
+            </picture>
           </li>
         </ul>
       </div>
@@ -1018,7 +1101,8 @@
             </ul>
           </div>
 
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/4U1XG8gkNrM" title="YouTube video player"
+          <iframe width="560" height="315" loading="lazy" src="https://www.youtube.com/embed/4U1XG8gkNrM"
+            title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen>
@@ -1027,7 +1111,7 @@
       </div>
     </div>
 
-    <section class="descr section" id="vertebro" style="background-image: url('images/descr-bg.jpg')">
+    <section class="descr section" id="vertebro" style="background-image: url('images/descr-bg.webp')">
       <div class="container">
         <h2 class="descr__title title">
           Вертебропластика
@@ -1042,24 +1126,33 @@
 
         <ul class="descr__list">
           <li class="descr__item">
-            <img class="descr__img" src="images/vertebro/1.jpg" alt="зображення процесу виконання процедури" width="250"
-              height="150">
+            <picture>
+              <source srcset="./images/descr/operation-main-mob.webp" media="(max-width:576px)">
+              <img class="descr__img" src="images/descr/operation-main.webp" alt="зображення процесу виконання процедури" width="363"
+              height="200">
+            </picture>
           </li>
 
           <li class="descr__item">
-            <img class="descr__img" src="images/vertebro/2.jpg" alt="зображення процесу виконання процедури" width="250"
-              height="150">
+            <picture>
+              <source srcset="./images/descr/operation-bottom-mob.webp" media="(max-width:576px)">
+              <img class="descr__img" src="images/descr/operation-bottom.webp" alt="зображення процесу виконання процедури" width="363"
+              height="200">
+            </picture>
           </li>
 
           <li class="descr__item">
-            <img class="descr__img" src="images/vertebro/3.jpg" alt="зображення процесу виконання процедури" width="250"
-              height="150">
+            <picture>
+              <source srcset="./images/descr/neuro-mob.webp" media="(max-width:576px)">
+              <img class="descr__img" src="images/descr/neuro.webp" alt="зображення процесу виконання процедури" width="363"
+              height="200">
+            </picture>
           </li>
         </ul>
       </div>
     </section>
 
-    <section class="descr section" id="micro" style="background-image: url('images/descr-bg.jpg')">
+    <section class="descr section" id="micro" style="background-image: url('images/descr-bg.webp')">
       <div class="container">
         <h2 class="descr__title title">
           Мікродискектомія
@@ -1077,18 +1170,27 @@
 
         <ul class="descr__list">
           <li class="descr__item">
-            <img class="descr__img" src="images/micro/1.jpg" alt="зображення процесу виконання процедури" width="250"
-              height="150">
+            <picture>
+              <source srcset="./images/descr/operation-bottom-mob.webp" media="(max-width:576px)">
+              <img class="descr__img" src="images/descr/operation-bottom.webp" alt="зображення процесу виконання процедури" width="363"
+              height="200">
+            </picture>
           </li>
 
           <li class="descr__item">
-            <img class="descr__img" src="images/micro/2.jpg" alt="зображення процесу виконання процедури" width="250"
-              height="150">
+            <picture>
+              <source srcset="./images/descr/operation-main-mob.webp" media="(max-width:576px)">
+              <img class="descr__img" src="images/descr/operation-main.webp" alt="зображення процесу виконання процедури" width="363"
+              height="200">
+            </picture>
           </li>
 
           <li class="descr__item">
-            <img class="descr__img" src="images/micro/3.jpg" alt="зображення процесу виконання процедури" width="250"
-              height="150">
+            <picture>
+              <source srcset="./images/descr/neuro-mob.webp" media="(max-width:576px)">
+              <img class="descr__img" src="images/descr/neuro.webp" alt="зображення процесу виконання процедури" width="363"
+              height="200">
+            </picture>
           </li>
         </ul>
       </div>
@@ -1135,7 +1237,8 @@
             </ul>
           </div>
 
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/2siQccKiN7c" title="YouTube video player"
+          <iframe width="560" height="315" loading="lazy" src="https://www.youtube.com/embed/2siQccKiN7c"
+            title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen>
@@ -1199,27 +1302,9 @@
 
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5074.357757034669!2d30.76876182804851!3d50.512238417935684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4d94a09968c85%3A0xf3d474a5aed88c34!2zItCV0L3QtdGA0LPRltGPIiDQntC30LTQvtGA0L7QstGH0LjQuSDQptC10L3RgtGAINCa0ZbQvdC10LfRltC-0YLQtdGA0LDQv9GW0Zc!5e0!3m2!1suk!2sua!4v1665524659106!5m2!1suk!2sua"
-            width="600" height="350" style="border:0;" allowfullscreen="" loading="lazy"
+            width="600" height="350" loading="lazy" style="border:0;" allowfullscreen="" loading="lazy"
             referrerpolicy="no-referrer-when-downgrade">
           </iframe>
-        </div>
-
-        <div class="contact__box">
-          <h3 class="contact__title">Записатись на прийом</h3>
-
-          <form class="contact__form">
-            <label class="contact__label">
-              <input class="contact__input" type="text" placeholder="Як Вас звати?" required>
-            </label>
-            
-            <label class="contact__label">
-              <input class="contact__input" type="tel" placeholder="Ваш номер телефону" required>
-            </label>
-
-            <button class="contact__btn btn" type="submit">
-              Відправити
-            </button>
-          </form>
         </div>
       </div>
     </section>

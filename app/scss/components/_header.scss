@@ -4,21 +4,6 @@
   background-size: cover;
   position: relative;
   height: 100vh;
-  z-index: 2;
-  overflow: hidden;
-  height: 100vh;
-
-  &::before {
-    content: "";
-    width: 100%;
-    height: 45vh;
-    background-image: linear-gradient(180deg, #40575c58 0%, rgba(51, 51, 51, 0.595076) 31.64%, rgba(51, 51, 51, 0.222586) 74.35%, rgba(51, 51, 51, 0) 99.87%);
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: -1;
-  }
 
   &__content {
     display: flex;
@@ -98,9 +83,8 @@
   &::after {
     content: '';
     position: absolute;
-    width: 200%;
+    width: 100vw;
     height: 100%;
-    left: -50%;
     background-color: transparent;
     transition: background-color 0.4s;
     z-index: -1;
@@ -155,17 +139,12 @@
 
   &.fixed {
     max-width: 1220px;
-    padding: 50px 10px;
+    padding: 20px 10px;
     margin: 0 auto;
     position: fixed;
-    left: 10px;
-  }
 
-  &.fixed {
-    left: 10px;
-  }
-
-  &.fixed::after {
-    background-color: rgb(49, 181, 204);
+    &::after {
+      background-color: rgb(49, 181, 204);
+    }
   }
 }

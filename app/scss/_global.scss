@@ -1,7 +1,6 @@
 html,
 body {
   scroll-behavior: smooth;
-  overflow-x: hidden;
 }
 
 body {
@@ -10,17 +9,11 @@ body {
   font-size: 18px;
   line-height: 1.4;
   font-weight: 300;
-  background-color: $white;
-  display: flex;
-  flex-direction: column;
-}
+  background-color: $white; 
 
-body.lock {
-  overflow: hidden;
-}
-
-.main {
-  flex-grow: 1;
+  &.lock {
+    overflow: hidden;
+  }
 }
 
 .container {

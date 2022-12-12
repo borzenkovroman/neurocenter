@@ -5,7 +5,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 70px;
   }
 
   &__info {
@@ -103,10 +102,6 @@
     }
   }
 
-  &__box {
-    margin: 0 auto 40px;
-  }
-
   &__title {
     text-align: center;
     font-weight: 700;
@@ -124,40 +119,6 @@
       bottom: -20px;
       left: 50%;
       transform: translateX(-50%);
-    }
-  }
-
-  &__form {
-    padding: 60px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    border: 2px solid $bg;
-  }
-
-  &__input {
-    padding: 15px 30px;
-    border: 1px solid $bg;
-    border-radius: 6px;
-    margin-bottom: 20px;
-    width: 100%;
-    display: block;
-    font-weight: 700;
-
-    &:last-of-type {
-      margin-bottom: 40px;
-    }
-
-    &:hover {
-      background-color: $accent;
-    }
-
-    &:active {
-      background-color: $bg;
-    }
-
-    &:focus {
-      outline: 2px solid $accent;
     }
   }
 }
