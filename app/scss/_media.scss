@@ -247,7 +247,9 @@
     &__list {
       display: block;
       position: absolute;
-      background-color: #ccc;
+      top: 0; 
+      left: -15px;
+      right: -15px;
       text-align: center;
       padding: 90px 0 15px;
       background-color: #2d3335;
@@ -385,7 +387,7 @@
   .menu {
 
     &__list {
-      padding: 82px 0 15px;
+      padding: 82px 0 15px; 
     }
 
     &__link {

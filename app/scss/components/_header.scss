@@ -4,6 +4,7 @@
   background-size: cover;
   position: relative;
   height: 100vh;
+  overflow-x: hidden;
 
   &__content {
     display: flex;
